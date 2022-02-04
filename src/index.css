@@ -157,6 +157,6 @@ input[type="submit"] {
 
 .css-viou3o-MuiAutocomplete-root .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
     width: 100% !important;
-    transform: translate(-5%, -45%);
-    border: none;
+    transform: translate(-5%, -45%) !important;
+    border: none !important;
 }

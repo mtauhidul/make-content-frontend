@@ -2,8 +2,8 @@ import React from 'react';
 
 const ThirdStep = () => {
   return (
-    <div>
-      <h2>Thanks for the register</h2>
+    <div id='firstStepContainer'>
+      <h3>Thanks for the register</h3>
     </div>
   );
 };

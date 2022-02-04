@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import React from 'react';
 import Form from '../Components/Form';
 
@@ -7,17 +6,9 @@ const SecondStep = ({ stepChange, user }) => {
     stepChange(value);
   };
   return (
-    <div>
+    <div id='secondStepContainer'>
       <div>
-        <Form user={user} />
-      </div>
-      <div>
-        <Button onClick={() => handleChange(1)} variant='outlined'>
-          Previous
-        </Button>
-        <Button onClick={() => handleChange(3)} variant='outlined'>
-          Next
-        </Button>
+        <Form user={user} handleChange={handleChange} />
       </div>
     </div>
   );

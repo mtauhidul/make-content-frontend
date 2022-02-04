@@ -8,10 +8,10 @@ const FirstStep = ({ stepChange, setUser }) => {
     setUser(value);
   };
   return (
-    <div>
+    <div id='firstStepContainer'>
       <img src={Logo} alt='Logo' />
       <h3>Register</h3>
-      <div>
+      <div id='changeButtonContainer2'>
         <Button onClick={() => handleChange('client')} variant='outlined'>
           Client
         </Button>

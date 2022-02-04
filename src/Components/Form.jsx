@@ -1,23 +1,31 @@
-import { Switch } from '@mui/material';
+import { Autocomplete, Switch, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-const Form = ({ user }) => {
+const locations = ['Poland', 'Netherland', 'Finland'];
+
+const Form = ({ user, handleChange }) => {
   const [company, setCompany] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    handleChange(3);
+  };
+
   console.log(errors);
   const label = { inputProps: { 'aria-label': 'Switch demo' } };
   return (
-    <div>
+    <div id='formWrapper'>
       <Switch
         onChange={() => (company ? setCompany(false) : setCompany(true))}
         {...label}
       />
+
+      <label htmlFor=''>Company Account?</label>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
@@ -35,10 +43,15 @@ const Form = ({ user }) => {
           placeholder='Email'
           {...register('Email', { required: true, pattern: /^\S+@\S+$/i })}
         />
-        <select {...register('Location', { required: true })}>
-          <option value='Poland'>Poland</option>
-          <option value='Poland'>Finland</option>
-        </select>
+
+        <Autocomplete
+          // {...register('Location', { required: true })}
+          disablePortal
+          id='combo-box-demo'
+          options={locations}
+          sx={{ width: 300 }}
+          renderInput={(params) => <TextField {...params} />}
+        />
         <input
           type='password'
           placeholder='Password'
@@ -89,15 +102,17 @@ const Form = ({ user }) => {
         {user === 'copywriter' && (
           <textarea {...register('Sample Text', { required: true })} />
         )}
-
-        <div>
+        <br />
+        <div id='agreement'>
           <input
             type='checkbox'
             placeholder='I agree to the terms and policy'
             {...register('I agree to the terms and policy', { required: true })}
           />
+
           <label htmlFor=''>I agree to the terms and policy</label>
         </div>
+        <br />
 
         <input type='submit' />
       </form>

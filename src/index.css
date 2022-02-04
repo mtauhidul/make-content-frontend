@@ -1,3 +1,162 @@
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../src/assets/bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+img {
+    max-width: 240px;
+}
+
+form {
+    width: 100%;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+select {
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1.5;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 16px);
+    padding: 0.375rem 0.75rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #3e4676;
+    border: 1px solid #d3e0e9;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    color: #fff;
+    border-color: #687ae8;
+    background-color: #687ae8;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.2;
+    cursor: pointer;
+    height: 50px;
+}
+
+
+
+/* Custom Styles */
+
+#formWrapper {
+    padding: 50px;
+    margin: 0 auto;
+    height: 85vh;
+    overflow: scroll;
+}
+
+#secondStepContainer {
+    height: 100vh;
+    background-color: #fff;
+    max-width: 35vw;
+    margin: 0 auto;
+    min-width: 340px;
+}
+
+#firstStepContainer {
+    height: 50vh;
+    background-color: #fff;
+    width: 35vw;
+    min-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    position: absolute;
+    border-radius: 4px;
+}
+
+#changeButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    padding-top: 30px;
+}
+
+#changeButtonContainer Button {
+    width: 120px;
+}
+
+#changeButtonContainer2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    padding-top: 30px;
+    width: 80%;
+}
+
+#changeButtonContainer2 Button {
+    width: 45%;
+    height: 50px;
+    font-size: 14px;
+}
+
+#agreement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 18px;
+}
+
+#agreement input[type="checkbox"] {
+    height: 16px;
+    width: 16px;
+    margin-right: 10px;
+}
+
+.MuiAutocomplete-hasPopupIcon.css-viou3o-MuiAutocomplete-root .MuiOutlinedInput-root,
+.MuiAutocomplete-hasClearIcon.css-viou3o-MuiAutocomplete-root .MuiOutlinedInput-root {
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1.5;
+    display: block;
+    width: 80%;
+    margin-left: 0 !important;
+    height: calc(1.5em + 0.75rem + 16px);
+    padding: 0.375rem 0.75rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    color: #3e4676;
+    border: 1px solid #d3e0e9;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    margin: 0px auto;
+    box-sizing: border-box !important;
+    min-width: 120px !important;
+}
+
+.css-viou3o-MuiAutocomplete-root .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+    width: 100% !important;
+    transform: translate(-5%, -45%);
+    border: none;
 }
